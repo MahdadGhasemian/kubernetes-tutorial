@@ -1,10 +1,11 @@
 ---
   apiVersion: apps/v1
-  kind: ReplicaSet
+  kind: Deployment
   metadata:
     name: webapp
   spec:
     replicas: 2
+    # minReadySeconds:  30
     selector:
       matchLabels:
         app: webapp
@@ -15,7 +16,7 @@
       spec:
         containers:
           - name: webapp
-            image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+            image: richardchesterwood/k8s-fleetman-webapp-angular:release0
 
 ---
   apiVersion: v1
