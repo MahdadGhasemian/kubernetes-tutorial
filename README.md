@@ -1,7 +1,10 @@
 # kubernetes-tutorial
 Some simple example of kubernetes
 
-# kubectl:
+# Docs:
+[Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+
+# Kubectl:
 
 - kubectl apply -f .
 - kubectl get all
@@ -14,12 +17,14 @@ Some simple example of kubernetes
 - kubectl get all -n kube-public
 - kubectl logs POD-NAME
 - kubectl logs -f POD-NAME
+- kubectl get pv
+- kubectl get pvc
 
-# minikube:
+# Minikube:
 - minikube service fleetman-webapp --url
 - minikube service fleetman-queue --url
 
-# networking inside a pod
+# Networking inside a pod
 - kubectl exec -it webapp-random-name sh
 ```bash
 / # cat /etc/resolv.conf
