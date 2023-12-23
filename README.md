@@ -2,15 +2,17 @@
 Some simple example of kubernetes
 
 # kubectl:
+
 - kubectl apply -f .
 - kubectl get all
-- kubectl describe rs webapp
-- kubectl rollout status deployment webapp
-- kubectl rollout history deploy webapp
-- kubectl rollout undo deploy webapp
+- kubectl describe rs REPLICASET-NAME
+- kubectl rollout status deployment DEPLOYMENT-NAME
+- kubectl rollout history deploy DEPLOYMENT-NAME
+- kubectl rollout undo deploy DEPLOYMENT-NAME
 - kubectl get ns
 - kubectl get all -n kube-system
 - kubectl get all -n kube-public
+- kubectl logs POD-NAME
 
 # minikube:
 - minikube service fleetman-webapp --url
