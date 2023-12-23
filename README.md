@@ -13,6 +13,7 @@ Some simple example of kubernetes
 - kubectl get all -n kube-system
 - kubectl get all -n kube-public
 - kubectl logs POD-NAME
+- kubectl logs -f POD-NAME
 
 # minikube:
 - minikube service fleetman-webapp --url
