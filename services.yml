@@ -10,7 +10,6 @@
     # or maybe eexternal users to connect to (eg browser)
     selector:
       app: webapp
-      release: "0-5"
 
     ports:
       - name: http
@@ -34,4 +33,39 @@
         port: 8161
         nodePort: 30010
 
+      - name: endpint
+        port: 61616
+
     type: NodePort
+
+---
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: fleetman-position-tracker
+
+  spec:
+    selector:
+      app: position-tracker
+
+    ports:
+      - name: http
+        port: 8080
+
+    type: ClusterIP
+
+---
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: fleetman-api-gateway
+
+  spec:
+    selector:
+      app: api-gateway
+
+    ports:
+      - name: http
+        port: 8080
+
+    type: ClusterIP
